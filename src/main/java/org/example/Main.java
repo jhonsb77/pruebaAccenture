@@ -25,6 +25,7 @@ public class Main {
 //        driver.get("https://tasks.evalartapp.com/automatization/buttons/test");
         System.setProperty("webdriver.gecko.driver","C://Program Files//Driver//geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         driver.get("https://tasks.evalartapp.com/automatization/buttons/test");
         Thread.sleep(3000);
         driver.findElement(By.name("username")).sendKeys("740670");
@@ -37,11 +38,11 @@ public class Main {
             try{
                 System.out.println(botones.get(i).getText());
                 botones.get(i).click();
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             }catch (Exception e){
                 System.out.println(botones.get(i).getText());
                 botones.get(i).click();
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             }
 
         }
